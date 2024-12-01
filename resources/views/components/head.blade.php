@@ -14,11 +14,31 @@
                 extend: {
                     colors: {
                         darkblue: '#010030',
+                        darkbluedetails: '#020066',
+                        purplecolor: '#150D45',
+                        lightpurplecolor: '#2A1A5A',
                     },
                     boxShadow: {
                         'purple': '0 0px 22px #8E5AC2',
                     }
-                }
+                },
+                animation: {
+                    'banneropacity': 'banner_opacity 0.3s forwards',
+                },
+                keyframes: {
+                    banner_opacity: {
+                        '0%': {
+                            opacity: 1,
+                        },
+                        '50%': {
+                            opacity: 0,
+                        },
+                        '100%': {
+                            opacity: 1,
+                        },
+                    }
+                },
+
             }
         }
     </script>
@@ -26,41 +46,30 @@
         onload="this.rel='stylesheet'">
 
     <style>
-        .animation-edit div{
-            animation: off 0.6s ease-in-out forwards;
-        }
-        .animation-edit svg:hover + div{
-            display: flex;
-            cursor: pointer;
-            animation: on 0.6s ease-in-out;
-        }
-        .batata div:hover{
-            display: flex !important;
+
+
+        ::-webkit-scrollbar {
+            width: 12px;
         }
 
-        @keyframes on{
-            0%{
-                margin-right: -16px;
-            }
-            60%{
-                margin-right: 4px;
-            }
-            100%{
-                margin-right: 0px;
-            }
+        ::-webkit-scrollbar-track {
+            background: transparent;
         }
-        @keyframes off{
-            0%{
-                margin-right: 0px;
-            }
-            60%{
-                margin-right: 4px;
-            }
-            100%{
-                margin-right: -10px;
-                opacity: 0.5;
-                display: none;
-            }
+
+        ::-webkit-scrollbar-thumb {
+            background: #8E5AC2;
+            border-radius: 6px;
         }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8E5AC2;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8E5AC2 transparent;
+        }
+
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 </head>

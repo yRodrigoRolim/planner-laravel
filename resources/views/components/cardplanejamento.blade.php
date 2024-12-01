@@ -1,4 +1,4 @@
-@props(['infos' => '','nomeanotacao' => ""])
+@props(['infos' => '','nomeanotacao' => "",'img_banner' => "img/banner.jpg", 'id_card' => 1])
 
 
 @php
@@ -8,12 +8,12 @@
 @endphp
 
 @if ($nomeanotacao != '')
-<div class="w-full">
-    <div class="relative h-46">
+<div class="mx-auto my-0 w-10/12 md:w-10/12 lg:w-full card cursor-grab select-none" data-id="{{$id_card}}">
+    <div class="relative h-46 gallery-image-cards">
         <div class="absolute flex items-center justify-center w-full h-full z-10">
             <p class="text-2xl font-bold text-white">{{$nomeanotacao}}</p>
         </div>
-        <img src="{{ asset('img/banner.jpg') }}" alt="banner" class="h-full w-full object-cover rounded">
+        <img src="{{ asset("img/$img_banner") }}" alt="banner" class="h-full w-full object-cover rounded cards_planejamento_imgs">
     </div>
 
     @if ($infos != '')

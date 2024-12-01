@@ -3,13 +3,10 @@
 
 <body class="bg-darkblue overflow-y-visible">
 
-    <x-banner>
-        <img src="{{ asset('img/banner.jpg') }}" alt="banner" class="h-full w-full object-cover">
-    </x-banner>
+    <x-banner banner="img/img-4.jpg"></x-banner>
 
     <main class="lg:mx-8 mx-4">
         {{$slot}}
     </main>
 
-</body>
-</html>
+    <x-footer></x-footer>

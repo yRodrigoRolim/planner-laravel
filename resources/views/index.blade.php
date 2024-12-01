@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="mb-96">
+    <section>
         <div class="flex mt-16 justify-between">
             <div class="flex items-center justify-center">
                 <h1 class="text-3xl md:text-3xl lg:text-4xl  text-white mr-4 leading-none">Seu Planos</h1>
@@ -32,6 +32,6 @@
 
         <x-planejamento></x-planejamento>
 
-
     </section>
+        <x-list-item></x-list-item>
 </x-layout>

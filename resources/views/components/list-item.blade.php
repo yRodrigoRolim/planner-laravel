@@ -10,10 +10,6 @@
     
     </div>
 
-    <div class="text-white ml-0 lg:ml-4 bg-purplecolor p-4 rounded lg:mt-0 mt-2">
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-    </div>
+    <x-createitem></x-createitem>
 
 </div>

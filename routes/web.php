@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoteController;
 
 Route::get('', function () {
-    return redirect('/note');
+    return redirect()->route('note.index'); 
 })->name('home');
 
 Route::resource('note', NoteController::class);

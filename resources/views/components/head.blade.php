@@ -46,8 +46,6 @@
         onload="this.rel='stylesheet'">
 
     <style>
-
-
         ::-webkit-scrollbar {
             width: 12px;
         }
@@ -70,6 +68,12 @@
             scrollbar-color: #8E5AC2 transparent;
         }
 
+        input::-webkit-calendar-picker-indicator {
+            filter: invert(80%);
+        }
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+
 </head>

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meu planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -71,9 +75,41 @@
         input::-webkit-calendar-picker-indicator {
             filter: invert(80%);
         }
-
     </style>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const select = document.getElementById('createItem'); // Select com o ID 'createItem'
+            const outroSelect = document.getElementById('outroselect'); // Elemento para trocar classe
+            const newType = document.getElementById('newtype'); // Elemento para remover 'hidden'
+
+            if (select && outroSelect && newType) {
+                select.addEventListener('change', () => {
+                    const selectedOption = select.value; // Valor da opção selecionada
+                    if (selectedOption === 'outros') {
+                        // Troca a classe grid-cols-1 por grid-cols-2
+                        outroSelect.classList.remove('grid-cols-1');
+                        outroSelect.classList.add('grid-cols-2');
+
+                        // Remove a classe 'hidden' do elemento newtype
+                        newType.classList.remove('hidden');
+                    } else {
+                        // Volta ao estado original caso não seja 'outro'
+                        outroSelect.classList.remove('grid-cols-2');
+                        outroSelect.classList.add('grid-cols-1');
+                        newType.classList.add('hidden');
+                    }
+                });
+            } else {
+                console.error('Um ou mais elementos não foram encontrados.');
+            }
+        });
+    </script>
+    <style>
+        .fontpersonalizada {
+            font-family: "Quicksand", sans-serif;
+        }
+    </style>
 
 </head>

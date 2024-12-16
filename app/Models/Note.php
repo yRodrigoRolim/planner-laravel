@@ -14,7 +14,7 @@ class Note extends Model
         'image',
         'data',
         'hour',
-        'type_id', // Adicione este campo
+        'type_id', 
     ];
 
     public function type()
